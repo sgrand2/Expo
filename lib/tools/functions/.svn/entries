@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="212"
+   name=""
+   committed-date="2007-01-16T04:46:38.252481Z"
+   url="svn+ssh://liquid@cyrius.hopto.org/home/svn/antiskewl/main/php/functions"
+   last-author="richardotap"
+   kind="dir"
+   uuid="bc40ec03-e821-0410-846c-c3b7b26ce53b"
+   revision="238"/>
+<entry
+   committed-rev="212"
+   name="autoload.php5"
+   text-time="2007-01-16T05:21:16.000000Z"
+   committed-date="2007-01-16T04:46:38.252481Z"
+   checksum="c1c4fee22f21219da0a6f6fad4895db4"
+   last-author="richardotap"
+   kind="file"
+   prop-time="2007-01-16T05:21:16.000000Z"/>
+</wc-entries>

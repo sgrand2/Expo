@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="202"
+   name=""
+   committed-date="2007-01-13T02:54:02.286509Z"
+   url="svn+ssh://liquid@cyrius.hopto.org/home/svn/antiskewl/main/php/classes"
+   last-author="richardotap"
+   kind="dir"
+   uuid="bc40ec03-e821-0410-846c-c3b7b26ce53b"
+   revision="238"/>
+<entry
+   committed-rev="202"
+   name="Buttons.php5"
+   text-time="2007-01-16T05:21:16.000000Z"
+   committed-date="2007-01-13T02:54:02.286509Z"
+   checksum="61f3c6726ddfd01d1ea4017dbb43f21f"
+   last-author="richardotap"
+   kind="file"
+   prop-time="2007-01-16T05:21:16.000000Z"/>
+<entry
+   committed-rev="202"
+   name="Tools.php5"
+   text-time="2007-01-16T05:21:16.000000Z"
+   committed-date="2007-01-13T02:54:02.286509Z"
+   checksum="4ea28d25da7cf52e5b12a16794f62921"
+   last-author="richardotap"
+   kind="file"
+   prop-time="2007-01-16T05:21:16.000000Z"/>
+</wc-entries>

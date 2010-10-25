@@ -1,0 +1,20 @@
+<?php
+
+class Buttons
+{            
+	public static function Delete($postid) {
+		global $ext;
+		echo "<a href=\"index.$ext?id=edit&method=delete&postid=$postid\" class=\"delete\">[DELETE]</a>";
+	}
+ 
+	public static function Login() {
+		global $ext;
+		echo "| <a href=\"index.$ext?id=login\">Login</a>";		
+	}
+        
+	public static function Logout() {
+		global $ext;
+		echo "| <a href=\"/index.$ext?id=logout\">Log out</a>";		
+	}
+
+}

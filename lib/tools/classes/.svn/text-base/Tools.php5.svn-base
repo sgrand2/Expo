@@ -1,0 +1,265 @@
+<?php
+
+class Tools
+{
+   /**
+    * Cleans $input trimming whitespace and stripping slashes.
+
+    * @param $input array containing input to filter
+    * @return boolean
+   */
+   public static function clean_input($input) {
+      if (Tools::cleanup($input) === true) {
+         return $input;
+      }
+      else {
+         false;
+      }
+   }
+
+   /**
+      Helper for clean_input
+   */
+   private function cleanup(&$input)
+   {
+      if (!is_array($input)) {
+         return false;
+      }
+
+      foreach ($input as $key => $value) {
+         if (is_array($input[$key]))
+         {
+            $this->cleanup($input[$key]);
+         }
+         else
+         {
+            # strip the slashes if magic quotes is on
+            if(get_magic_quotes_gpc()) {
+               $input[$key] = trim(stripslashes($value));
+            }
+            else {
+               $input[$key] = trim($value);
+            }
+         }
+      }
+      return true;
+   }
+
+   public static function is_assoc($array) {
+      if (is_array($array)) {
+         foreach ($array as $key => $value) {
+            if (!is_integer($key)) {
+               return true;
+            }
+         }
+         return false;
+      }
+      else {
+         return false;
+      }
+   }
+
+
+      public static function UnitedStates() {
+      return array(
+         'AL' => 'Alabama',
+         'AK' => 'Alaska',
+         'AZ' => 'Arizona',
+         'AR' => 'Arkansas',
+         'CA' => 'California',
+         'CO' => 'Colorado',
+         'CT' => 'Connecticut',
+         'DC' => 'District of Columbia',
+         'DE' => 'Delaware',
+         'FL' => 'Florida',
+         'GA' => 'Georgia',
+         'HI' => 'Hawaii',
+         'ID' => 'Idaho',
+         'IL' => 'Illinois',
+         'IN' => 'Indiana',
+         'IA' => 'Iowa',
+         'KS' => 'Kansas',
+         'KY' => 'Kentucky',
+         'LA' => 'Louisiana',
+         'ME' => 'Maine',
+         'MD' => 'Maryland',
+         'MA' => 'Massachusetts',
+         'MI' => 'Michigan',
+         'MN' => 'Minnesota',
+         'MS' => 'Mississippi',
+         'MO' => 'Missouri',
+         'MT' => 'Montana',
+         'NE' => 'Nebraska',
+         'NV' => 'Nevada',
+         'NH' => 'New Hampshire',
+         'NJ' => 'New Jersey',
+         'NM' => 'New Mexico',
+         'NY' => 'New York',
+         'NC' => 'North Carolina',
+         'ND' => 'North Dakota',
+         'OH' => 'Ohio',
+         'OK' => 'Oklahoma',
+         'OR' => 'Oregon',
+         'PA' => 'Pennsylvania',
+         'RI' => 'Rhode Island',
+         'SC' => 'South Carolina',
+         'SD' => 'South Dakota',
+         'TN' => 'Tennessee',
+         'TX' => 'Texas',
+         'UT' => 'Utah',
+         'VT' => 'Vermont',
+         'VA' => 'Virginia',
+         'WA' => 'Washington',
+         'WV' => 'West Virginia',
+         'WI' => 'Wisconsin',
+         'WY' => 'Wyoming'
+      );
+   }
+
+	public static function InitMySQL() { 
+		global $link;
+		global $dbname;
+		if (!$link) {
+		   echo 'Could not connect to MySQL';
+		   exit;
+		}
+
+		if (!mysql_select_db($dbname, $link)) {
+		   echo 'Could not select database';
+		   exit;
+		}
+	}
+	
+	public static function Paginate($name, $page, $perpage) {
+		str_replace("'", "''", $page);
+
+		if($page < 0)
+		   $page = abs($page);
+		if($page != 0)
+			$start = ($page - 1) * $perpage;
+		if($page == 0)
+			$start = 0;
+
+		$sql    = "SELECT * FROM " . $name . " ORDER BY id DESC LIMIT " . $start . " , " . $perpage;
+		return $sql;
+	}
+	
+	public static function CheckLogin() {
+		if (isset($_SESSION['login'])) {
+			echo "";
+		}           
+		else {
+			global $ext;
+			$url = ("/index.$ext?id=login");  
+			header("Location: $url");
+			die;
+		}
+	}
+	
+	public static function PageVariables($id) {
+		global $title, $inc, $ext;
+		switch ($id) {
+			case "home":
+				$title = "News"; 
+				$inc = "main/news/news.$ext";
+				break;
+			case "contact":
+				$title = "Contact"; 
+				$inc = "main/contacts.$ext";
+				break;
+			case "sound":
+				$title = "Sound";
+				$inc = "main/audio.$ext";
+				break;
+			case "misc":
+				$title = "Miscellaneous";
+				$inc = "main/other.$ext";
+				break;
+			case "hardware":
+				$title = "Hardware Hacks";
+				$inc = "main/hardware.$ext";
+				break;
+			case "funny":
+				$title = "Funny";
+				$inc = "main/funny.$ext";
+				break;
+			case "ip":
+			    $title = "IP";
+				$inc = "main/ip.$ext";
+				break;
+			case "flashing":
+				$title = "Fix Stuck Pixels";
+				$inc = "main/flashing.$ext";
+				break;
+			case "notice":
+				$title = "Notice";
+				$inc = "main/notice.$ext";
+				break;
+			case "login":
+				$title = "Login";
+				$inc = "main/login/login.$ext";
+				break;
+			case "logout":
+				$title = "Logout";
+				$inc = "main/login/login.$ext";
+				break;
+			case "form":
+				$title = "Post News";
+				$inc = "main/news/form.$ext";
+				break;
+			case "post":
+				$title = "Post Status";
+				$inc = "main/news/post.$ext";
+				break;
+			case "admin":
+				$title = "Post News";
+				$inc = "main/news/form.$ext";
+				break;
+			case "edit":
+				$title = "Post News";
+				$inc = "main/news/form.$ext";
+				break;
+			default:
+				$title = "News";
+				$inc = "main/news/news.$ext";
+		}
+	}
+	
+	public static function LoginStatus() {
+		if (isset($_SESSION['login']) && $_GET['id'] != 'logout') {
+			Buttons::Logout();
+			echo " | Hello " . $_SESSION['firstname'] . ".";
+		}                                        
+		if (!isset($_SESSION['login']) && !isset($_POST['login'])) {
+			Buttons::Login();
+		}
+	}
+	
+	public static function Title() {
+		$randnum = rand(1,18);
+		global $quote;
+			
+		echo "$quote[$randnum]";
+	}
+	
+	public static function Query($sql) {
+		global $link;
+		$result = mysql_query($sql, $link);
+
+		if (!$result) {
+		   echo "DB Error, could not query the database\n";
+		   echo 'MySQL Error: ' . mysql_error();
+		   exit;
+		}
+		return $result;		
+	}
+	
+	public static function ImportStylesheets() {
+		global $stylesheets;
+		foreach ($stylesheets as $path) {
+			echo "<link href=\"/main/style/css/$path\" rel=\"stylesheet\" type=\"text/css\" />\n";
+		}
+	}
+
+}
+?>
