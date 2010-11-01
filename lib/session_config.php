@@ -7,7 +7,10 @@ functions and libraries can be called
 
 
 //$serveroot is the root directory from the server variable settings
-foreach(glob($_SERVER['DOCUMENT_ROOT']) as $serverroot);
+//foreach(glob($_SERVER['DOCUMENT_ROOT']) as $serverroot);
+//Temporarily changed
+$serverroot = "/var/www/Expo";
+
 
 
 
@@ -15,6 +18,7 @@ foreach(glob($_SERVER['DOCUMENT_ROOT']) as $serverroot);
 
 //This will begin the user session
 session_start();
+
 
 ?>
 
