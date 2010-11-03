@@ -6,7 +6,7 @@ $display = $_GET['disp'];
 switch($display)
 {
     case "t";
-    echo "Students Page where they find out stuffs about companies";
+    include("$serverroot/mods/students.php");
     break; 
 
     case "e";

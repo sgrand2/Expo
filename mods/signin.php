@@ -27,8 +27,8 @@ if ((isset($User_Post)) && (isset($pwd_sub)) && !isset($_SESSION['LOGGED_IN']))
             }else
             {
                 $_SESSION['netid']      =  $row['netid'];
-                $_SESSION['first_name'] =  $row['first_name'];
-                $_SESSION['last_name']  =  $row['last_name'];
+                $_SESSION['First_Name'] =  $row['first_name'];
+                $_SESSION['Last_Name']  =  $row['last_name'];
                 $_SESSION['pref_email'] =  $row['pref_email'];
                 $_SESSION['year']       =  $row['year'];
                 $_SESSION['print_name'] =  $row['print_name'];
