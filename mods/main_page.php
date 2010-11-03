@@ -1,5 +1,3 @@
 <?php
-
-include("$serverroot/mods/signin.php");
-
+echo $_SESSION['netid'];
 ?>

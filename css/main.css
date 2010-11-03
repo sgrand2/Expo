@@ -144,6 +144,17 @@ th.sidebox
 	float: left;
 	overflow: hidden;
 }
+.register
+{
+        word-spacing: 1px;
+        line-height: 20px;
+        font-size: 85%;
+	background-color: #FFFFFF;
+	padding: 5px;
+	width: 300px;
+	float: left;
+	overflow: hidden;
+}
 .userstat
 {
         word-spacing: 1px;

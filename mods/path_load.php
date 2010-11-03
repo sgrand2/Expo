@@ -10,7 +10,7 @@ switch($display)
     break; 
 
     case "e";
-    echo "Employers Page where they find out stuffs about students school";
+    include("$serverroot/mods/employers.php");
     break; 
 
     case "m";

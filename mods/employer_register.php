@@ -23,17 +23,7 @@ $wirels_post = $_POST['wirels'];
 
 //echo "hello world\n";
 
-if (isset($cname_post))
-{
-    Tools::InitMysql();
-
-    $user_query= "INSERT INTO `Company` (`Company_name`, `Num_table`, `Address`, `URL`, `Attend_dates`,`Rep_num`,`Class_status`,`Degree_type`,`Job_type`,`Grad_date`,`Citizenship_status`,`Discipline`,`Job_loc`,`Wireless_access`) 
-        VALUES('$cname_post', '$ntables_post', '$address_post', '$url_post','$attend_dt_post','$repno_post','$class_stat_post','$deg_type_post','$job_type_post','$grad_dt_post','$cit_stat_post','$major_post','$job_loc_post','$wirels_post')";
-
-    $query = Tools::Query($user_query);
-
-}
-echo "<form action='index.php' method='post' />";
+echo "<form action='/index.php?disp=r' method='post' />";
 
 echo "Name of Company: <input type='text' name='cname'/><br>"; 
 echo "URL: <input type='text' name='url' /> <br>";
@@ -55,6 +45,12 @@ echo "Need wireless access (Y/N): <input type='text' name='wirels' /> <br>";
 echo "<input type='submit' />";
 
 echo "</form>";
+Tools::InitMysql();
+
+    $user_query= "INSERT INTO `Company` (`Company_name`, `Num_table`, `Address`, `URL`, `Attend_dates`,`Rep_num`,`Class_status`,`Degree_type`,`Job_type`,`Grad_date`,`Citizenship_status`,`Discipline`,`Job_loc`,`Wireless_access`) 
+        VALUES('$cname_post', '$ntables_post', '$address_post', '$url_post','$attend_dt_post','$repno_post','$class_stat_post','$deg_type_post','$job_type_post','$grad_dt_post','$cit_stat_post','$major_post','$job_loc_post','$wirels_post')";
+
+     Tools::Query($user_query);
 
 
 
