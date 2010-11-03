@@ -6,15 +6,19 @@ $display = $_GET['disp'];
 switch($display)
 {
     case "t";
-    echo "so the navigation works";
+    echo "Students Page where they find out stuffs about companies";
+    break; 
+
+    case "e";
+    echo "Employers Page where they find out stuffs about students school";
     break; 
 
     case "m";
-    echo "Hello";
+include("$serverroot/mods/main_page.php");
     break;
 
 Default;
-echo "Default Modules are Loaded";
+include("$serverroot/mods/main_page.php");
 
 }
 

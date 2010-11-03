@@ -133,6 +133,8 @@ class Tools
 			echo "<link href=\"/main/style/css/$path\" rel=\"stylesheet\" type=\"text/css\" />\n";
 		}
 	}
-
+	public static function test(){
+	   echo "The tools seem to be loaded";
+   }
 }
 ?>

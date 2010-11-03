@@ -5,8 +5,8 @@
    */
 
    $search_paths = array(
-      $_SERVER['DOCUMENT_ROOT'] . '/include/tools/classes',
-      $_SERVER['DOCUMENT_ROOT'] . '/include/tools/classes'
+      $_SERVER['DOCUMENT_ROOT'] . '/lib/tools/classes',
+      $_SERVER['DOCUMENT_ROOT'] . '/lib/tools/classes'
    );
 
    function __autoload($search_class)

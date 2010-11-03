@@ -6,9 +6,9 @@
  */
          
 $mysql = "localhost";
-$dbuname = "netid_test";
-$password = 'password';
-$dbname = "netid_test";
+$dbuname = "expo_test";
+$password = 'password**';
+$dbname = "expo";
 global $dbname;
 
 global $link;
