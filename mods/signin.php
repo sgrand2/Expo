@@ -3,7 +3,6 @@ require_once("$serverroot/lib/tools/libload.php");
 
 $user_sub = $_POST['user']; //Submitted Username
 $pwd_sub  = $_POST['pwd'];  //Submitted Password
-echo $_SESSION['LOGGED_IN'];
 
 //Perform the query only if those values have something in them
 if ((isset($user_sub)) && (isset($pwd_sub)) && !isset($_SESSION['LOGGED_IN']))
