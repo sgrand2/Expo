@@ -61,6 +61,12 @@ body
 	width: 950px;
 	overflow: hidden;
 }
+.tempcolor
+{
+        border-top: thin solid #000000;
+	background-color:  #FFFFFF;
+	overflow: hidden;
+}
 /*text styles*/
 p
 {
