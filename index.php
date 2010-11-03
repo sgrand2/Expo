@@ -37,7 +37,7 @@ require_once("./lib/tools/libload.php");
  * It generally defautls to just showing the header/main content/footer/
  ******************************************************************************/
 
-
+include ("$serverroot/mods/nav_top_bar.php");
 include ("$serverroot/mods/header.php");
 include ("$serverroot/mods/path_load.php");
 include ("$serverroot/mods/footer.php");

@@ -1,3 +1,4 @@
 <?php
-echo "this is the footer";
+echo "<div id='footer'>";
+echo "</div>";
 ?>

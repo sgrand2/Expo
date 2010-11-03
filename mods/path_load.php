@@ -5,12 +5,17 @@ $display = $_GET['disp'];
 
 switch($display)
 {
-case "m";
-echo "Hello";
-break;
+    case "t";
+    echo "so the navigation works";
+    break; 
+
+    case "m";
+    echo "Hello";
+    break;
 
 Default;
-echo "Hello";
-
+echo "Default Modules are Loaded";
 
 }
+
+?>
