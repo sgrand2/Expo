@@ -13,11 +13,9 @@ body
 }
 #maincontainer
 {
+        border-top: thin solid #000000;
 	text-align: left;
 	background-color: #FFFFFF;
-	padding: 1px;
-        width: 90%;
-	overflow: hidden;
 }
 #header
 {
@@ -28,11 +26,12 @@ body
 }
 #top_nav_bar
 {
+	padding: 3px;
+	float: left;
 	background-color: #FFFFFF;
-	text-align: center;
+	text-align: left;
         border-bottom: thin solid #000000;
-	width: 30%;
-	height: 20px;
+	width: 450px;
 }
 
 #footer
@@ -244,4 +243,31 @@ th.sidebox
 	overflow: hidden;
 
 
+}
+
+.LRPanel
+{
+
+	width: 100%;
+	overflow: hidden;
+}
+.lpanel
+{
+        border-top: thin solid #CCCCCC;
+        border-bottom: thin solid #CCCCCC;
+        background-color: #FFFFFF;
+	float: left;
+	width: 19.9999%;
+	overflow: hidden;
+}
+.rpanel
+{
+
+        border-top: thin solid #CCCCCC;
+        border-left: thin solid #CCCCCC;
+        border-bottom: thin solid #CCCCCC;
+        background-color: #FFFFFF;
+	float: right;
+	width: 80%;
+	overflow: hidden;
 }

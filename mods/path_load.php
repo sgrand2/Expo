@@ -24,6 +24,10 @@ switch($display)
     case "r";
     include("$serverroot/mods/employer_register.php");
     break; 
+    
+    case "panel";
+    include("$serverroot/mods/panel.php");
+    break; 
 
 Default;
 include("$serverroot/mods/main_page.php");

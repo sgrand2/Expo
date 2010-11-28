@@ -23,6 +23,9 @@ require_once("./lib/tools/libload.php");
    <title>Engineering Career Expo</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/thickbox.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="css/jquery.js"></script> 
+    <script type="text/javascript" src="css/thickbox.js"></script>
  </head>
 
      <body>

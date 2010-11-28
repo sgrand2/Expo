@@ -1,5 +1,5 @@
 <?php
-
+echo "<div class= 'LRPanel'>";
 echo "<div id = 'top_nav_bar'>";
 echo "<a href = './index.php?disp=m'>Home</a>";
 echo " | ";
@@ -17,6 +17,7 @@ if (($_SESSION['LOGGED_IN']) == 1)
 echo " | ";
 	echo "<a href = './index.php?disp=l'>Logout</a>";
 } 
+echo "</div>";
 echo "</div>";
 
 
