@@ -284,85 +284,94 @@ if (isset($cname_post))
    $result7= mysql_query($results7, $link);
 
    if($aero_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('1')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','1','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($agri_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('2')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','2','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($bioe_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUE('3')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','3','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($chemengg_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('4')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','4','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($chem_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('5')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','5','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($civil_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('6')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','6','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($compengg_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('7')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','7','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($compsci_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('8')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','8','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($elec_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('9')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','9','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($engmech_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('10')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','10','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($env_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('11')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','11','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($gen_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('12')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','12','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($indus_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('13')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','13','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($matsci_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('14')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','14','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($math_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('15')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','15','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($meche_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('16')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','16','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($nucl_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('17')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','17','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($phy_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('18')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','18','$eid')";
+      $result4= mysql_query($results4, $link);
    }
    if($stat_post==1){
-      $results4="INSERT INTO `Major`(`Discipline`) VALUES('19')";
-      $result4= mysql_query($result4, $link);
+      $results4="INSERT INTO `Major`(`CID`,`Discipline`, `Expo_ID`) VALUES('$cid_next','19','$eid')";
+      $result4= mysql_query($results4, $link);
    }
 
 
    // CLOSE THE FP
+
+   //Grab the rep_id and insert the $cid_next into their table
+   $repid = $_SESSION['Rep_ID'];
+   $_SESSION['CID'] = $cid_next;
+   $rep_company = "UPDATE Representatives SET CID = '$cid_next' WHERE Rep_ID = '$repid'";
+   echo "$rep_company";
+
+   $result = mysql_query($rep_company, $link);
    mysql_close($link);
+
 }
 
 
