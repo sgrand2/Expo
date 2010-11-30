@@ -52,10 +52,10 @@ echo "<form action ='index.php?disp=panel&cmod=main&delexpoid=1' method='post'>"
 echo "<table border='1px'>";
 while($row = mysql_fetch_array($display_old_expos))
 {
-    $Year = $row['Year'];
-    $Semester = $row['Semester'];
-    $Expo_ID  = $row['Expo_ID'];
-    echo "<tr><td><input type='radio' name ='delete_expo' value='$Expo_ID'></td> <td>$Year</td> <td>$Semester</td> <td>$Expo_ID</td></tr>";
+  $Year = $row['Year'];
+  $Semester = $row['Semester'];
+  $Expo_ID  = $row['Expo_ID'];
+  echo "<tr><td><input type='radio' name ='delete_expo' value='$Expo_ID'></td> <td>$Year</td> <td>$Semester</td> <td>$Expo_ID</td></tr>";
 }
 echo "</table>";
 echo "<input type='submit' value='Remove Old Expo and Data'></form><br />";

@@ -9,6 +9,11 @@ switch($display)
     include("$serverroot/mods/students.php");
     break; 
 
+    case "view";
+    include("$serverroot/mods/view_company.php");
+    break; 
+    
+
     case "e";
     include("$serverroot/mods/employers.php");
     break; 

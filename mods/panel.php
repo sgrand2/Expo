@@ -8,7 +8,8 @@ if (isset($_SESSION['netid']))
 //////////////////////////////////////
 
 echo "<div class='lpanel'>";
-  echo "<a href='/index.php?disp=panel&cmod=main'>Expo Settings</a>";
+  echo "<a href='/index.php?disp=panel&cmod=main'>Expo Settings</a><br />";
+  echo "<a href='/index.php?disp=panel&cmod=comp'>Company Settings</a>";
 echo "</div>";
 
 //////////////////////////////////////
@@ -21,6 +22,10 @@ switch($committee_menu_option)
 
   case "main";
   include ("$serverroot/mods/expo_settings.php");
+  break;
+  
+  case "comp";
+  include ("$serverroot/mods/company_settings.php");
   break;
 
 Default;
